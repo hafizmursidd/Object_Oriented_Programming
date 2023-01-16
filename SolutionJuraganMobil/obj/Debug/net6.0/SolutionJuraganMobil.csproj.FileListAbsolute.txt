@@ -1,0 +1,15 @@
+C:\Bootcamp\Batch18\OOP C#\SolutionJuraganMobil\bin\Debug\net6.0\SolutionJuraganMobil.exe
+C:\Bootcamp\Batch18\OOP C#\SolutionJuraganMobil\bin\Debug\net6.0\SolutionJuraganMobil.deps.json
+C:\Bootcamp\Batch18\OOP C#\SolutionJuraganMobil\bin\Debug\net6.0\SolutionJuraganMobil.runtimeconfig.json
+C:\Bootcamp\Batch18\OOP C#\SolutionJuraganMobil\bin\Debug\net6.0\SolutionJuraganMobil.dll
+C:\Bootcamp\Batch18\OOP C#\SolutionJuraganMobil\bin\Debug\net6.0\SolutionJuraganMobil.pdb
+C:\Bootcamp\Batch18\OOP C#\SolutionJuraganMobil\obj\Debug\net6.0\SolutionJuraganMobil.csproj.AssemblyReference.cache
+C:\Bootcamp\Batch18\OOP C#\SolutionJuraganMobil\obj\Debug\net6.0\SolutionJuraganMobil.GeneratedMSBuildEditorConfig.editorconfig
+C:\Bootcamp\Batch18\OOP C#\SolutionJuraganMobil\obj\Debug\net6.0\SolutionJuraganMobil.AssemblyInfoInputs.cache
+C:\Bootcamp\Batch18\OOP C#\SolutionJuraganMobil\obj\Debug\net6.0\SolutionJuraganMobil.AssemblyInfo.cs
+C:\Bootcamp\Batch18\OOP C#\SolutionJuraganMobil\obj\Debug\net6.0\SolutionJuraganMobil.csproj.CoreCompileInputs.cache
+C:\Bootcamp\Batch18\OOP C#\SolutionJuraganMobil\obj\Debug\net6.0\SolutionJuraganMobil.dll
+C:\Bootcamp\Batch18\OOP C#\SolutionJuraganMobil\obj\Debug\net6.0\refint\SolutionJuraganMobil.dll
+C:\Bootcamp\Batch18\OOP C#\SolutionJuraganMobil\obj\Debug\net6.0\SolutionJuraganMobil.pdb
+C:\Bootcamp\Batch18\OOP C#\SolutionJuraganMobil\obj\Debug\net6.0\SolutionJuraganMobil.genruntimeconfig.cache
+C:\Bootcamp\Batch18\OOP C#\SolutionJuraganMobil\obj\Debug\net6.0\ref\SolutionJuraganMobil.dll
