@@ -1,5 +1,7 @@
 ﻿using SolutionJuraganMobil.Base;
 using SolutionJuraganMobil.Model;
+using SolutionJuraganMobil.OOP;
+using SolutionJuraganMobil.OOP.Structure;
 using SolutionJuraganMobil.Repository;
 using System;
 
@@ -12,51 +14,40 @@ namespace MyApp // Note: actual namespace depends on the project name.
         static void Main(string[] args)
         {
 
-            var RepoManager = new RepositoryManager();
+            //var RepoManager = new RepositoryManager();
 
-            var IPrivateJetRepo = new PrivateJetRepository();
-            IPrivateJetRepo.FindAll();
-
-
-
-            var fetchAllJet = RepoManager.PrivateJet.FindAll();
-            var fetchAllSuv = RepoManager.Suv.FindAll();
-            var fetchAllTaxi = RepoManager.Taxi.FindAll();
-
-
-            var TotalVehicle = RepoManager.Summary.GetTotalVehicle();
-            Console.WriteLine("Total Vehicle\t\t: " + TotalVehicle);
-
-            var TotalSUV = RepoManager.Summary.GetTotalSUV();
-            Console.WriteLine("Total Vehicle (SUV)\t: " + TotalSUV);
-
-            var totalIncomeSUV = RepoManager.Summary.GetTotalIncomeSUV();
-            string resultSUV = totalIncomeSUV.ToString("N");
-            Console.WriteLine("Total Income SUV \t: " + resultSUV);
-
-            var totalIncomeTaxi = RepoManager.Summary.GetTotalIncomeTaxi();
-            string resultTaxi = totalIncomeTaxi.ToString("N");
-            Console.WriteLine("Total Income Taxi \t: "+resultTaxi);
-
-
-            var totalIncomeJet = RepoManager.Summary.GetTotalIncomePrivateJet();
-            string resultPrivateJet = totalIncomeJet.ToString("N");
-            Console.WriteLine("Total Income Jet \t: " + resultPrivateJet);
-
-            var totalIncomeVehicle = RepoManager.Summary.GetTotalIncomeVehicle();
-            string resultVehicle = totalIncomeVehicle.ToString("N");
-            Console.WriteLine("Total Vehicle \t\t: " + resultVehicle);
+            //var IPrivateJetRepo = new PrivateJetRepository();
+            //IPrivateJetRepo.FindAll();
 
 
 
+            //var fetchAllJet = RepoManager.PrivateJet.FindAll();
+            //var fetchAllSuv = RepoManager.Suv.FindAll();
+            //var fetchAllTaxi = RepoManager.Taxi.FindAll();
 
 
+            //var TotalVehicle = RepoManager.Summary.GetTotalVehicle();
+            //Console.WriteLine("Total Vehicle\t\t: " + TotalVehicle);
+
+            //var TotalSUV = RepoManager.Summary.GetTotalSUV();
+            //Console.WriteLine("Total Vehicle (SUV)\t: " + TotalSUV);
+
+            //var totalIncomeSUV = RepoManager.Summary.GetTotalIncomeSUV();
+            //string resultSUV = totalIncomeSUV.ToString("N");
+            //Console.WriteLine("Total Income SUV \t: " + resultSUV);
+
+            //var totalIncomeTaxi = RepoManager.Summary.GetTotalIncomeTaxi();
+            //string resultTaxi = totalIncomeTaxi.ToString("N");
+            //Console.WriteLine("Total Income Taxi \t: "+resultTaxi);
 
 
+            //var totalIncomeJet = RepoManager.Summary.GetTotalIncomePrivateJet();
+            //string resultPrivateJet = totalIncomeJet.ToString("N");
+            //Console.WriteLine("Total Income Jet \t: " + resultPrivateJet);
 
-
-
-
+            //var totalIncomeVehicle = RepoManager.Summary.GetTotalIncomeVehicle();
+            //string resultVehicle = totalIncomeVehicle.ToString("N");
+            //Console.WriteLine("Total Vehicle \t\t: " + resultVehicle);
 
 
             //var find = RepoManager.Suv.FindById("D 1001 UM");
@@ -101,6 +92,61 @@ namespace MyApp // Note: actual namespace depends on the project name.
             //var totalIncome = RepoManager.Summary.GetTotalIncomeVehicle();
             //string result = totalIncome.ToString("N");
             //Console.WriteLine(result);
+
+
+            IVehicleFactory _IVehicle = new VehicleFactory();
+
+            var suvHolder = new VehicleStruct
+            {
+                NoPolice = "B 00 BS",
+                VehicleType = VehicleType.SUV,
+                TransactionDate = DateTime.Now,
+                DriverFee = 150_000,
+                Rent = 500_000
+            };
+
+
+            var taxiHolder = new VehicleRecord
+            {
+                NoPolice = "B 1 NAL",
+                VehicleType = VehicleType.TAXI,
+                TransactionDate = DateTime.Now,
+                DriverFee = 150_000,
+                Order = 50,
+                OrderPerKM = 5000
+            };
+            var suv = _IVehicle.CreateSUV(suvHolder);
+            Console.WriteLine(suv);
+
+            Console.WriteLine();
+
+            var taxi = _IVehicle.Createtaxi(taxiHolder);
+            Console.WriteLine(taxi);
+
+            Console.WriteLine();
+
+            List<VehicleBase> list = new List<VehicleBase>() { suv, taxi };
+            //_IVehicle.DisplayVehicle(list);
+
+            Console.WriteLine(_IVehicle.GetTotalVehicle(list, VehicleType.All));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
         }

@@ -11,17 +11,16 @@ namespace SolutionJuraganMobil.OOP
     {
         public SUV CreateSUV(VehicleStruct vhStruct)
         {
-            throw new NotImplementedException();
+            return new SUV(vhStruct.NoPolice, vhStruct.VehicleType, vhStruct.TransactionDate, vhStruct.Rent, vhStruct.DriverFee) ;
         }
-
-        public SUV CreateTaxi(VehicleRecord vhRecord)
+        public Taxi Createtaxi(VehicleRecord vhRecord)
         {
-            throw new NotImplementedException();
+            return new Taxi(vhRecord.NoPolice, vhRecord.VehicleType, vhRecord.TransactionDate,  vhRecord.Order, vhRecord.OrderPerKM);
         }
 
         public void DisplayVehicle<T>(List<T> listVehicle)
         {
-            throw new NotImplementedException();
+            listVehicle.ForEach(x => System.Console.WriteLine(x));
         }
 
         public int GetTotalVehicle<T>(List<T> listVehicle, VehicleType vhType)

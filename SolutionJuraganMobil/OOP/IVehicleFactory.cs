@@ -11,7 +11,7 @@ namespace SolutionJuraganMobil.OOP
     {
         public SUV CreateSUV(VehicleStruct vhStruct);
 
-        public SUV CreateTaxi(VehicleRecord vhRecord);
+        public Taxi Createtaxi(VehicleRecord vhRecord);
 
         public void DisplayVehicle<T> (List<T> listVehicle);
 

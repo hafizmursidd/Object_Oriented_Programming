@@ -10,10 +10,11 @@ namespace SolutionJuraganMobil.OOP.Structure
     {
 
         public String? NoPolice { get; set; }
-        public VehicleType? VehicleType { get; set; }
+        public VehicleType VehicleType { get; set; }
         public DateTime TransactionDate { get; set; }
         public double Rent { get; set; }
-        public double? OrderPerKM{ get; set; }
-        public double? Order { get; set; }
+        public double DriverFee{ get; set; }
+        public int Order { get; set; }
+        public double OrderPerKM { get; set; }   
     }
 }

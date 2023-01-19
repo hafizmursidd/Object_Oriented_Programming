@@ -8,12 +8,20 @@ namespace SolutionJuraganMobil.OOP
 {
     internal class SUV : VehicleBase
     {
-        public SUV(string noPolice, VehicleType vehicleType, DateTime transactionDate, double rent, double driver = 0) : base(noPolice, vehicleType, transactionDate, rent)
+        public SUV(string noPolice, VehicleType vehicleType, DateTime transactionDate, double rent, double driverfee = 0) : base(noPolice, vehicleType, transactionDate, rent)
         {
-            DriverFee = driver;
+            DriverFee = driverfee;
             TotalIncome = (decimal)(Rent + DriverFee);
         }
 
         public double DriverFee { get; set; }
+
+        public override string ToString()
+        {
+            return base.ToString() +
+                $"Order        : {Rent}\n" +
+                $"Order PerKM  : {DriverFee}\n" +
+                $"Total Income : {TotalIncome}\n";
+        }
     }
 }

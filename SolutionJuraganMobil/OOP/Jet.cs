@@ -15,5 +15,13 @@ namespace SolutionJuraganMobil.OOP
 
 
         public double OrderPerHour { get; set; }
+
+        public override string ToString()
+        {
+            return base.ToString() +
+               // $"Order        : {Order}\n" +
+                $"Order PerHours: {OrderPerHour}\n" +
+                $"Total Income : {TotalIncome}\n";
+        }
     }
 }
