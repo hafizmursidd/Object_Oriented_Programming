@@ -9,10 +9,7 @@ namespace SolutionJuraganMobil.Repository
 {
     internal interface IPrivateJetRepository
     {
-        PrivateJet FindById(String Nopol);
         List<PrivateJet> FindAll();
-        List<PrivateJet> Create(PrivateJet taxi);
-        PrivateJet Update(string Nopol, PrivateJet taxi);
-        int delete(string Nopol);
+
     }
 }

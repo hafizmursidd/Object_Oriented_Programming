@@ -9,7 +9,7 @@ namespace SolutionJuraganMobil.Model
     internal class Taxi : Vehicle
 
     {
-        static decimal _totalIncome;
+        public static decimal _totalIncome;
         static int _count;
         private int _order;
         private decimal _OrderPerKM;
@@ -32,7 +32,8 @@ namespace SolutionJuraganMobil.Model
             return _count;
         }
 
-        public static decimal IncomeTaxi() {
+        public static decimal IncomeTaxi()
+        {
             return _totalIncome;
         }
 

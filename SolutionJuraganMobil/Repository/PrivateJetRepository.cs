@@ -18,6 +18,25 @@ namespace SolutionJuraganMobil.Repository
                 new PrivateJet("ID8089", 2015, 175_000_000_000, 15, new DateOnly(2023, 01, 25), 55_000_000, 25_000_000)
                 };
         }
+        public List<PrivateJet> FindAll()
+        {
+            return _privatejet;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         public PrivateJet FindById(string Nopol)
         {
@@ -28,10 +47,6 @@ namespace SolutionJuraganMobil.Repository
             }
             else return null;
 
-        }
-        public List<PrivateJet> FindAll()
-        {
-            return _privatejet;
         }
         public List<PrivateJet> Create(PrivateJet taxi)
         {

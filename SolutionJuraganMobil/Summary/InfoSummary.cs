@@ -40,7 +40,7 @@ namespace SolutionJuraganMobil.Summary
 
         public int GetTotalSUV()
         {
-            throw new NotImplementedException();
+            return SUV.Count();
         }
 
 

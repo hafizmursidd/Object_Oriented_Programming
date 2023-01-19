@@ -1,15 +1,63 @@
 ﻿using SolutionJuraganMobil.Base;
 using SolutionJuraganMobil.Model;
+using SolutionJuraganMobil.Repository;
 using System;
 
 namespace MyApp // Note: actual namespace depends on the project name.
 {
     internal class Program
     {
+
+       
         static void Main(string[] args)
         {
 
             var RepoManager = new RepositoryManager();
+
+            var IPrivateJetRepo = new PrivateJetRepository();
+            IPrivateJetRepo.FindAll();
+
+
+
+            var fetchAllJet = RepoManager.PrivateJet.FindAll();
+            var fetchAllSuv = RepoManager.Suv.FindAll();
+            var fetchAllTaxi = RepoManager.Taxi.FindAll();
+
+
+            var TotalVehicle = RepoManager.Summary.GetTotalVehicle();
+            Console.WriteLine("Total Vehicle\t\t: " + TotalVehicle);
+
+            var TotalSUV = RepoManager.Summary.GetTotalSUV();
+            Console.WriteLine("Total Vehicle (SUV)\t: " + TotalSUV);
+
+            var totalIncomeSUV = RepoManager.Summary.GetTotalIncomeSUV();
+            string resultSUV = totalIncomeSUV.ToString("N");
+            Console.WriteLine("Total Income SUV \t: " + resultSUV);
+
+            var totalIncomeTaxi = RepoManager.Summary.GetTotalIncomeTaxi();
+            string resultTaxi = totalIncomeTaxi.ToString("N");
+            Console.WriteLine("Total Income Taxi \t: "+resultTaxi);
+
+
+            var totalIncomeJet = RepoManager.Summary.GetTotalIncomePrivateJet();
+            string resultPrivateJet = totalIncomeJet.ToString("N");
+            Console.WriteLine("Total Income Jet \t: " + resultPrivateJet);
+
+            var totalIncomeVehicle = RepoManager.Summary.GetTotalIncomeVehicle();
+            string resultVehicle = totalIncomeVehicle.ToString("N");
+            Console.WriteLine("Total Vehicle \t\t: " + resultVehicle);
+
+
+
+
+
+
+
+
+
+
+
+
 
             //var find = RepoManager.Suv.FindById("D 1001 UM");
             //Console.WriteLine(find);
@@ -20,19 +68,16 @@ namespace MyApp // Note: actual namespace depends on the project name.
             //var find = RepoManager.PrivateJet.FindById("ID8089");
             //Console.WriteLine(find);
 
-            var fetchAll = RepoManager.PrivateJet.FindAll();
             //foreach (var item in fetchAll)
             //{
             //    Console.WriteLine(item);
             //}
 
-            var fetchAllSuv = RepoManager.Suv.FindAll();
             //foreach (var item in fetchAllSuv)
             //{
             //    Console.WriteLine(item);
             //}
 
-            var fetchAllTaxi = RepoManager.Taxi.FindAll();
             //foreach (var item in fetchAllTaxi)
             //{
             //    Console.WriteLine(item);
@@ -52,20 +97,6 @@ namespace MyApp // Note: actual namespace depends on the project name.
             //    Console.WriteLine(item);
             //}
 
-            var TotalVehicle = RepoManager.Summary.GetTotalVehicle();
-            Console.WriteLine(TotalVehicle);
-
-            var totalIncomeTaxi = RepoManager.Summary.GetTotalIncomeTaxi();
-            string resultTaxi = totalIncomeTaxi.ToString("N");
-            Console.WriteLine(resultTaxi);
-
-            var totalIncomeSUV = RepoManager.Summary.GetTotalIncomeSUV();
-            string resultSUV = totalIncomeSUV.ToString("N");
-            Console.WriteLine(resultSUV);
-
-            var totalIncomePJ = RepoManager.Summary.GetTotalIncomePrivateJet();
-            string resultPrivateJet = totalIncomePJ.ToString("N");
-            Console.WriteLine(resultPrivateJet);
 
             //var totalIncome = RepoManager.Summary.GetTotalIncomeVehicle();
             //string result = totalIncome.ToString("N");

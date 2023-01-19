@@ -9,10 +9,6 @@ namespace SolutionJuraganMobil.Repository
 {
     internal interface ISUVRepository
     {
-        SUV FindById(string Nopol);
         List<SUV> FindAll();
-        List<SUV> Create(SUV suv);
-        SUV Update(string id, SUV suv);
-        int Delete(string id);
     }
 }

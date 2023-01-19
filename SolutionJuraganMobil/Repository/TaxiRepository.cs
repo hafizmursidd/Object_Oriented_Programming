@@ -20,6 +20,33 @@ namespace SolutionJuraganMobil.Repository
             new Taxi("D 13 UK", 2020, 275_000_000M, 4, new DateOnly(2023, 01, 13), 90, 4_500M)
             };
         }
+        public List<Taxi> FindAll()
+        {
+            return _taxi;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         public Taxi FindById(string Nopol)
         {
             var TaxiNopol = _taxi.Find(s=>s.NoPolice.Equals(Nopol));
@@ -31,10 +58,7 @@ namespace SolutionJuraganMobil.Repository
             }
             else return null;
         }
-        public List<Taxi> FindAll()
-        {
-            return _taxi;
-        }
+
         public List<Taxi> Create(Taxi taxi)
         {
             throw new NotImplementedException();

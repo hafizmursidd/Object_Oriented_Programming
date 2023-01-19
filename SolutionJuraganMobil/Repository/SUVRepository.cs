@@ -21,6 +21,36 @@ namespace SolutionJuraganMobil.Repository
                ,new SUV("D 1004 UM", 2015, 350000000M, 5, new DateOnly(2023, 01, 13), 500000M, 150000M)
             };
         }
+        public List<SUV> FindAll()
+        {
+            return _suvs;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         public SUV FindById(string Nopol)
         {
@@ -30,10 +60,6 @@ namespace SolutionJuraganMobil.Repository
                 return SuvNopol;
             }
             else return null;
-        }
-        public List<SUV> FindAll()
-        {
-            return _suvs;
         }
 
 
